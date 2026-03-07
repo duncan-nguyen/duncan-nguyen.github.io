@@ -12,7 +12,7 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
     return (
         <>
             <div
-                className={`mobile-menu fixed inset-y-0 right-0 w-72 bg-white z-[60] shadow-2xl flex flex-col pt-24 px-8 gap-6 md:hidden ${isOpen ? 'open' : ''}`}
+                className={`mobile-menu fixed inset-y-0 right-0 w-72 bg-white dark:bg-[#121212] z-[60] shadow-2xl flex flex-col pt-24 px-8 gap-6 md:hidden ${isOpen ? 'open' : ''}`}
             >
                 <Link className="text-2xl font-bold hover:text-brand-blue transition-colors" href="/#about" onClick={onClose}>About</Link>
                 <Link className="text-2xl font-bold hover:text-brand-blue transition-colors" href="/#experience" onClick={onClose}>Experience</Link>

@@ -1,14 +1,15 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const cormorant = Cormorant_Garamond({
-    weight: ['700'],
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-sans' });
+const outfit = Outfit({
+    weight: ['500', '700'],
     subsets: ['latin'],
-    variable: '--font-cormorant'
+    variable: '--font-heading'
 });
 
 export const metadata: Metadata = {
@@ -51,7 +52,7 @@ export default function RootLayout({
     };
 
     return (
-        <html lang="en" className={`scroll-smooth ${inter.variable} ${cormorant.variable}`}>
+        <html lang="en" suppressHydrationWarning className={`scroll-smooth ${jakarta.variable} ${outfit.variable}`}>
             <head>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
                 <script
@@ -59,10 +60,12 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className="font-sans antialiased bg-white text-brand-charcoal pt-20">
-                <Navbar />
-                {children}
-                <Footer />
+            <body className="font-sans antialiased bg-[#F9FAFB] dark:bg-[#121212] text-brand-charcoal dark:text-gray-200 pt-20 transition-colors duration-300">
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     );

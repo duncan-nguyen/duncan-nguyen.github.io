@@ -41,14 +41,14 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
     if (items.length === 0) return null;
 
     return (
-        <aside className="border border-brand-border p-4 bg-white lg:sticky lg:top-28">
-            <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3">On this page</p>
+        <aside className="border border-brand-border dark:border-white/10 p-4 bg-white dark:bg-[#1a1a1a] lg:sticky lg:top-28">
+            <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 dark:text-gray-400 mb-3">On this page</p>
             <ul className="space-y-2">
                 {items.map((item) => (
                     <li key={`${item.id}-${item.level}`} className={item.level === 3 ? 'pl-4' : ''}>
                         <a
                             href={`#${item.id}`}
-                            className={`text-sm transition-colors ${activeId === item.id ? 'text-brand-blue font-semibold' : 'text-gray-600 hover:text-brand-blue'}`}
+                            className={`text-sm transition-colors ${activeId === item.id ? 'text-brand-blue dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-400 hover:text-brand-blue dark:hover:text-blue-400'}`}
                         >
                             {item.text}
                         </a>

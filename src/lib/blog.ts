@@ -117,12 +117,18 @@ function normalizeMetadata(slug: string, data: PostFrontmatter): PostMetadata {
 
 export function getPostSlugs() {
     if (!fs.existsSync(postsDirectory)) return [];
-    return fs.readdirSync(postsDirectory).filter(file => file.endsWith('.md'));
+    return fs.readdirSync(postsDirectory).filter(file => file.endsWith('.md') || file.endsWith('.mdx'));
 }
 
 export function getPostBySlug(slug: string, options?: { includeUnpublished?: boolean }): BlogPost {
-    const realSlug = slug.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, `${realSlug}.md`);
+    const realSlug = slug.replace(/\.mdx?$/, '');
+
+    // Try .mdx first, then .md
+    let fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
+    if (!fs.existsSync(fullPath)) {
+        fullPath = path.join(postsDirectory, `${realSlug}.md`);
+    }
+
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
     const meta = normalizeMetadata(realSlug, data as PostFrontmatter);

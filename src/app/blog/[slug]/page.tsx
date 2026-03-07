@@ -5,10 +5,10 @@ import { getAllPosts, getPostBySlug, getRelatedPosts, slugifyHeading } from '@/l
 import { format } from 'date-fns';
 import 'highlight.js/styles/github.css';
 import type { Metadata } from 'next';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
-import Markdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 
 export async function generateStaticParams() {
@@ -132,28 +132,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         <div className="mb-8 lg:hidden not-prose">
                             <TableOfContents items={post.toc} />
                         </div>
-                        <Markdown
-                            rehypePlugins={[rehypeHighlight]}
+                        <MDXRemote
+                            source={post.content}
+                            options={{
+                                mdxOptions: {
+                                    rehypePlugins: [rehypeHighlight as any]
+                                }
+                            }}
                             components={{
-                                h1: ({ children }) => {
+                                h1: ({ children, ...props }) => {
                                     const text = headingText(children);
                                     const id = slugifyHeading(text);
-                                    return <h1 id={id}>{children}</h1>;
+                                    return <h1 id={id} {...props as any}>{children}</h1>;
                                 },
-                                h2: ({ children }) => {
+                                h2: ({ children, ...props }) => {
                                     const text = headingText(children);
                                     const id = slugifyHeading(text);
-                                    return <h2 id={id}>{children}</h2>;
+                                    return <h2 id={id} {...props as any}>{children}</h2>;
                                 },
-                                h3: ({ children }) => {
+                                h3: ({ children, ...props }) => {
                                     const text = headingText(children);
                                     const id = slugifyHeading(text);
-                                    return <h3 id={id}>{children}</h3>;
+                                    return <h3 id={id} {...props as any}>{children}</h3>;
                                 },
                             }}
-                        >
-                            {post.content}
-                        </Markdown>
+                        />
                         <hr />
                         <p><em>Thanks for reading!</em></p>
 

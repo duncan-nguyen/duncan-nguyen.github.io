@@ -3,7 +3,7 @@ import RevealOnScroll from '../RevealOnScroll';
 
 export default function ExperienceSection() {
     return (
-        <section className="py-24 bg-brand-softGray px-6" id="experience">
+        <section className="py-24 bg-brand-softGray dark:bg-black/20 px-6" id="experience">
             <div className="max-w-6xl mx-auto">
                 <RevealOnScroll>
                     <h2 className="text-4xl font-bold mb-16">Professional Experience</h2>
@@ -15,10 +15,10 @@ export default function ExperienceSection() {
                             <div className="text-gray-400 font-medium">{exp.period}</div>
                             <div className="md:col-span-3">
                                 <h3 className="text-2xl font-bold mb-1">{exp.company}</h3>
-                                <p className="text-brand-blue font-semibold mb-4 uppercase tracking-wider text-xs">
+                                <p className="text-brand-blue dark:text-blue-400 font-semibold mb-4 uppercase tracking-wider text-xs">
                                     {exp.role} · {exp.location}
                                 </p>
-                                <ul className="space-y-3 text-gray-700 list-disc list-inside">
+                                <ul className="space-y-3 text-gray-700 dark:text-gray-300 list-disc list-inside">
                                     {exp.achievements.map((acc, index) => {
                                         if (typeof acc === 'string') {
                                             return <li key={index}>{acc}</li>;

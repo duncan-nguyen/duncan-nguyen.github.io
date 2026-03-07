@@ -6,11 +6,11 @@ export default function ResearchSection() {
             <div className="max-w-6xl mx-auto">
                 <RevealOnScroll className="flex items-center justify-between mb-16">
                     <h2 className="text-4xl font-bold">Research &amp; Publications</h2>
-                    <div className="hidden md:block h-px bg-brand-border flex-grow ml-12"></div>
+                    <div className="hidden md:block h-px bg-brand-border dark:bg-white/10 flex-grow ml-12"></div>
                 </RevealOnScroll>
 
                 {/* ViLexCPO Card */}
-                <RevealOnScroll className="group border border-brand-border hover:border-brand-blue transition-all duration-300 bg-white hover-lift">
+                <RevealOnScroll className="group border border-brand-border dark:border-white/10 hover:border-brand-blue dark:hover:border-blue-400 transition-all duration-300 bg-white dark:bg-[#1a1a1a] hover-lift">
                     {/* Paper header */}
                     <div className="p-8 md:p-12 pb-0 md:pb-0">
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
@@ -32,15 +32,15 @@ export default function ResearchSection() {
                                 <span className="pill-tag">Multi-task Learning</span>
                             </div>
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-brand-blue transition-colors leading-tight">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-brand-blue dark:group-hover:text-blue-400 transition-colors leading-tight">
                             ViLexCPO: A Multi-Task and Preference-Aligned Framework for Legal Question Answering
                         </h3>
-                        <p className="text-sm text-gray-500 mb-6">
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
                             <strong>Quang-Dung Nguyen</strong> (First Author), Duc-Dung Nguyen, Huu-Tri-Dung Vo, Thanh-Huong Le
-                            <span className="text-gray-300 mx-2">·</span>
+                            <span className="text-gray-300 dark:text-gray-600 mx-2">·</span>
                             Hanoi University of Science and Technology
                         </p>
-                        <p className="text-gray-600 max-w-4xl mb-8 leading-relaxed">
+                        <p className="text-gray-600 dark:text-gray-300 max-w-4xl mb-8 leading-relaxed">
                             A two-stage training framework for Vietnamese legal QA combining Multi-task Supervised
                             Fine-Tuning across three complementary tasks with Contrastive Preference Optimization (CPO)
                             to align model outputs with high-quality legal reasoning. Built on Qwen3-1.7B, demonstrating
@@ -49,25 +49,25 @@ export default function ResearchSection() {
                     </div>
 
                     {/* Training Pipeline Visualization */}
-                    <div className="px-8 md:px-12 py-8 bg-gray-50 border-t border-brand-border">
+                    <div className="px-8 md:px-12 py-8 bg-gray-50 dark:bg-[#121212] border-t border-brand-border dark:border-white/10">
                         <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Training Pipeline</h4>
                         <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-0">
-                            <div className="flex-1 bg-white border border-brand-border p-4 md:p-5">
-                                <div className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-2">Stage 0</div>
+                            <div className="flex-1 bg-white dark:bg-[#1a1a1a] border border-brand-border dark:border-white/10 p-4 md:p-5">
+                                <div className="text-xs font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-2">Stage 0</div>
                                 <div className="font-bold text-sm mb-1">Domain Pretraining</div>
-                                <div className="text-xs text-gray-500">144K Vietnamese legal texts (laws, decrees, news)</div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400">144K Vietnamese legal texts (laws, decrees, news)</div>
                             </div>
                             <div className="hidden md:block pipeline-connector mx-2"></div>
-                            <div className="flex-1 bg-white border border-brand-border p-4 md:p-5">
-                                <div className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-2">Stage 1</div>
+                            <div className="flex-1 bg-white dark:bg-[#1a1a1a] border border-brand-border dark:border-white/10 p-4 md:p-5">
+                                <div className="text-xs font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-2">Stage 1</div>
                                 <div className="font-bold text-sm mb-1">Multi-task SFT</div>
-                                <div className="text-xs text-gray-500">Citation Usefulness + MCQ + Citation Prediction</div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400">Citation Usefulness + MCQ + Citation Prediction</div>
                             </div>
                             <div className="hidden md:block pipeline-connector mx-2"></div>
-                            <div className="flex-1 bg-white border-2 border-brand-blue p-4 md:p-5">
-                                <div className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-2">Stage 2</div>
+                            <div className="flex-1 bg-white dark:bg-[#1a1a1a] border-2 border-brand-blue dark:border-blue-500 p-4 md:p-5">
+                                <div className="text-xs font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-2">Stage 2</div>
                                 <div className="font-bold text-sm mb-1">CPO Alignment</div>
-                                <div className="text-xs text-gray-500">80K preference triplets (chosen / rejected)</div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400">80K preference triplets (chosen / rejected)</div>
                             </div>
                         </div>
                         <div className="flex flex-col items-center gap-2 md:hidden -mt-2">
@@ -78,24 +78,24 @@ export default function ResearchSection() {
                     </div>
 
                     {/* Key Results */}
-                    <div className="px-8 md:px-12 py-8 border-t border-brand-border">
+                    <div className="px-8 md:px-12 py-8 border-t border-brand-border dark:border-white/10">
                         <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Key Results — VLSP LegalSLM Benchmark</h4>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                             <div>
-                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue">91.5<span className="text-xl">%</span></div>
-                                <div className="text-xs text-gray-500 mt-1">Avg Accuracy (Tasks 1&amp;2)</div>
+                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue dark:text-blue-500">91.5<span className="text-xl">%</span></div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Avg Accuracy (Tasks 1&amp;2)</div>
                             </div>
                             <div>
-                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue">96.0<span className="text-xl">%</span></div>
-                                <div className="text-xs text-gray-500 mt-1">Citation Usefulness</div>
+                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue dark:text-blue-500">96.0<span className="text-xl">%</span></div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Citation Usefulness</div>
                             </div>
                             <div>
-                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue">89.1<span className="text-xl">%</span></div>
-                                <div className="text-xs text-gray-500 mt-1">BERT-F1 (Syllogism QA)</div>
+                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue dark:text-blue-500">89.1<span className="text-xl">%</span></div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">BERT-F1 (Syllogism QA)</div>
                             </div>
                             <div>
-                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue">+44.4<span className="text-xl">%</span></div>
-                                <div className="text-xs text-gray-500 mt-1">Improvement over Baseline</div>
+                                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue dark:text-blue-500">+44.4<span className="text-xl">%</span></div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Improvement over Baseline</div>
                             </div>
                         </div>
 
