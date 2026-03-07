@@ -10,11 +10,39 @@
         name="description" />
     <meta content="Nguyen Quang Dung, AI Engineer, ML Engineer, Agentic AI, Physics-Informed ML, NLP, LLM"
         name="keywords" />
-    <!-- Open Graph -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://duncan-nguyen.github.io/" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://duncan-nguyen.github.io/" />
     <meta property="og:title" content="NGUYEN QUANG DUNG | AI/ML Engineer" />
     <meta property="og:description"
         content="AI/ML Engineer specializing in Agentic AI, LLM/SLM Fine-tuning, and Physics-Informed Machine Learning." />
-    <meta property="og:type" content="website" />
+    <!-- Thêm URL ảnh avatar/thumbnail của bạn vào content phía dưới -->
+    <meta property="og:image" content="https://duncan-nguyen.github.io/assets/images/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://duncan-nguyen.github.io/" />
+    <meta property="twitter:title" content="NGUYEN QUANG DUNG | AI/ML Engineer" />
+    <meta property="twitter:description"
+        content="AI/ML Engineer specializing in Agentic AI, LLM/SLM Fine-tuning, and Physics-Informed Machine Learning." />
+    <meta property="twitter:image" content="https://duncan-nguyen.github.io/assets/images/og-image.jpg" />
+
+    <!-- Schema Markup (JSON-LD) cho cấu trúc Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nguyen Quang Dung",
+      "jobTitle": "AI/ML Engineer",
+      "url": "https://duncan-nguyen.github.io",
+      "sameAs": [
+        "https://www.linkedin.com/in/yourprofile",
+        "https://github.com/yourgithub"
+      ]
+    }
+    </script>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <script src="./assets/js/tailwind-config.js"></script>
@@ -39,11 +67,9 @@
                     class="w-9 h-9 border-2 border-brand-charcoal group-hover:border-brand-blue group-hover:bg-brand-blue flex items-center justify-center transition-all duration-300 select-none"
                     style="font-family: 'Cormorant Garamond', serif; letter-spacing: 0.02em;">
                     <span class="text-brand-charcoal transition-colors duration-300"
-                        style="font-size: 12px;">N</span><span
-                        class="text-brand-blue transition-colors duration-300"
+                        style="font-size: 12px;">N</span><span class="text-brand-blue transition-colors duration-300"
                         style="font-size: 16px; line-height: 1;">Q</span><span
-                        class="text-brand-charcoal transition-colors duration-300"
-                        style="font-size: 12px;">D</span>
+                        class="text-brand-charcoal transition-colors duration-300" style="font-size: 12px;">D</span>
                 </span>
             </a>
             <!-- Desktop nav -->
@@ -52,6 +78,7 @@
                 <a class="nav-link hover:text-brand-blue transition-colors" href="#experience">Experience</a>
                 <a class="nav-link hover:text-brand-blue transition-colors" href="#research">Research</a>
                 <a class="nav-link hover:text-brand-blue transition-colors" href="#expertise">Expertise</a>
+                <a class="nav-link hover:text-brand-blue transition-colors" href="./blog/">Blog</a>
                 <a class="nav-link hover:text-brand-blue transition-colors" href="#contact">Contact</a>
             </div>
             <!-- Mobile hamburger -->
@@ -73,6 +100,7 @@
             data-close-menu>Research</a>
         <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="#expertise"
             data-close-menu>Expertise</a>
+        <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="./blog/" data-close-menu>Blog</a>
         <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="#contact"
             data-close-menu>Contact</a>
     </div>
@@ -137,7 +165,7 @@
                         <p class="text-lg text-gray-600 leading-relaxed">
                             Proficient in integrating scientific constraints into neural networks through
                             Physics-Informed ML, enhancing model interpretability and performance in complex production
-                            environments. Published researcher with work accepted at SOICT 2025 and IJCNN 2025.
+                            environments. Published researcher with work accepted at SOICT 2025.
                         </p>
                     </div>
                     <div class="flex flex-col gap-8 justify-center">

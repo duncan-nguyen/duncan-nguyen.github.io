@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog | NGUYEN QUANG DUNG</title>
+    <meta
+        content="Technical blog by Nguyen Quang Dung — AI/ML Engineer specializing in Agentic AI, LLM Fine-tuning, and Physics-Informed ML."
+        name="description" />
+    <meta content="Nguyen Quang Dung, Blog, AI, ML, Agentic AI, LLM, Physics-Informed ML" name="keywords" />
+    <link rel="canonical" href="https://duncan-nguyen.github.io/blog/" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://duncan-nguyen.github.io/blog/" />
+    <meta property="og:title" content="Blog | NGUYEN QUANG DUNG" />
+    <meta property="og:description" content="Technical blog on AI, ML, and software engineering." />
+    <!-- Image của blog list -->
+    <meta property="og:image" content="https://duncan-nguyen.github.io/assets/images/og-blog.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://duncan-nguyen.github.io/blog/" />
+    <meta property="twitter:title" content="Blog | NGUYEN QUANG DUNG" />
+    <meta property="twitter:description" content="Technical blog on AI, ML, and software engineering." />
+    <meta property="twitter:image" content="https://duncan-nguyen.github.io/assets/images/og-blog.jpg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@700&display=swap"
+        rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+</head>
+
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-brand-border transition-shadow duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="../index.html#hero" class="group flex items-center gap-2.5 transition-colors">
+                <span
+                    class="w-9 h-9 border-2 border-brand-charcoal group-hover:border-brand-blue group-hover:bg-brand-blue flex items-center justify-center transition-all duration-300 select-none"
+                    style="font-family: 'Cormorant Garamond', serif; letter-spacing: 0.02em;">
+                    <span class="text-brand-charcoal transition-colors duration-300"
+                        style="font-size: 12px;">N</span><span class="text-brand-blue transition-colors duration-300"
+                        style="font-size: 16px; line-height: 1;">Q</span><span
+                        class="text-brand-charcoal transition-colors duration-300" style="font-size: 12px;">D</span>
+                </span>
+            </a>
+            <!-- Desktop nav -->
+            <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide uppercase">
+                <a class="nav-link hover:text-brand-blue transition-colors" href="../index.html#about">About</a>
+                <a class="nav-link hover:text-brand-blue transition-colors"
+                    href="../index.html#experience">Experience</a>
+                <a class="nav-link hover:text-brand-blue transition-colors" href="../index.html#research">Research</a>
+                <a class="nav-link hover:text-brand-blue transition-colors" href="../index.html#expertise">Expertise</a>
+                <a class="nav-link active hover:text-brand-blue transition-colors" href="./">Blog</a>
+                <a class="nav-link hover:text-brand-blue transition-colors" href="../index.html#contact">Contact</a>
+            </div>
+            <!-- Mobile hamburger -->
+            <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-brand-charcoal transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-0.5 bg-brand-charcoal transition-all duration-300" id="bar2"></span>
+                <span class="block w-6 h-0.5 bg-brand-charcoal transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu"
+        class="mobile-menu fixed inset-y-0 right-0 w-72 bg-white z-[60] shadow-2xl flex flex-col pt-24 px-8 gap-6 md:hidden">
+        <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="../index.html#about"
+            data-close-menu>About</a>
+        <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="../index.html#experience"
+            data-close-menu>Experience</a>
+        <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="../index.html#research"
+            data-close-menu>Research</a>
+        <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="../index.html#expertise"
+            data-close-menu>Expertise</a>
+        <a class="text-2xl font-bold text-brand-blue transition-colors" href="./" data-close-menu>Blog</a>
+        <a class="text-2xl font-bold hover:text-brand-blue transition-colors" href="../index.html#contact"
+            data-close-menu>Contact</a>
+    </div>
+    <div id="menu-overlay" class="fixed inset-0 bg-black/30 z-[55] hidden md:hidden"></div>
+
+    <main class="pt-20">
+        <!-- Blog Header -->
+        <section class="py-16 md:py-20 px-6 border-b border-brand-border">
+            <div class="max-w-4xl mx-auto">
+                <span class="text-brand-blue font-semibold tracking-widest uppercase text-sm mb-4 block">Blog</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Writings</h1>
+                <p class="text-xl text-gray-500 font-light max-w-xl">
+                    Thoughts on AI, machine learning, research, and software engineering.
+                </p>
+            </div>
+        </section>
+
+        <!-- Blog Posts List -->
+        <section class="py-16 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div id="posts-container" class="space-y-6">
+                    <!-- Posts loaded via JS -->
+                </div>
+                <div id="no-posts" class="hidden text-center py-20">
+                    <p class="text-gray-400 text-lg">No posts yet. Stay tuned!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-brand-border">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="pt-4 text-xs uppercase tracking-widest text-gray-400">
+                &copy; 2026 NGUYEN QUANG DUNG. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/blog.js"></script>
+</body>
+
+</html>
