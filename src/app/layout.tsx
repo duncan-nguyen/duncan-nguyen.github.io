@@ -13,6 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://duncan-nguyen.github.io'),
     title: 'NGUYEN QUANG DUNG | AI/ML Engineer',
     description: 'Portfolio of Nguyen Quang Dung — AI/ML Engineer specializing in Agentic AI, LLM/SLM Fine-tuning, and Physics-Informed ML.',
     keywords: 'Nguyen Quang Dung, AI Engineer, ML Engineer, Agentic AI, Physics-Informed ML, NLP, LLM, Portfolio',
