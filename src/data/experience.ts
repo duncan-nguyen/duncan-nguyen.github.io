@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
     },
     {
         id: "astar",
-        period: "Feb 2025 — Nov 2025",
+        period: "Feb 2025 — Mar 2026",
         company: "A-Star Group",
         role: "AI Engineer (Promoted from Intern)",
         location: "Ha Noi, Vietnam",

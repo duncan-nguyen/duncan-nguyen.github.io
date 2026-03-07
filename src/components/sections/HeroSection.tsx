@@ -20,7 +20,7 @@ export default function HeroSection() {
                             <span className="text-brand-charcoal dark:text-white font-medium">Physics-Informed ML</span>.
                             Building intelligent systems for complex industrial and linguistic challenges.
                         </p>
-                        <div className="flex items-center gap-6 hero-animate hero-delay-4">
+                        <div className="flex flex-wrap items-center gap-6 hero-animate hero-delay-4">
                             <Link href="#contact" className="primary-button relative overflow-hidden group px-8 py-4 font-semibold shadow-md hover:shadow-xl hover:shadow-brand-blue/20 transition-all duration-300">
                                 <span className="relative z-10">Contact Me</span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/0 via-white/20 to-brand-blue/0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
@@ -28,6 +28,10 @@ export default function HeroSection() {
                             <Link href="#experience" className="text-brand-charcoal dark:text-white font-semibold border-b-2 border-brand-charcoal dark:border-white pb-1 hover:text-brand-blue dark:hover:text-blue-400 dark:hover:border-blue-400 transition-all">
                                 View Work
                             </Link>
+                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center gap-2 text-brand-charcoal dark:text-white font-semibold border-b-2 border-brand-charcoal dark:border-white pb-1 hover:text-brand-blue dark:hover:text-blue-400 dark:hover:border-blue-400 transition-all">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                Download CV
+                            </a>
                         </div>
                     </div>
                     <div className="mt-12 md:mt-0 flex justify-center md:justify-end">
