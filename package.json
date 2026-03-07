@@ -1,0 +1,33 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "rss": "node scripts/generate-rss.mjs",
+        "prebuild": "npm run rss",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "date-fns": "^4.1.0",
+        "gray-matter": "^4.0.3",
+        "next": "^16.1.6",
+        "react": "^19.2.4",
+        "react-dom": "^19.2.4",
+        "react-markdown": "^10.1.0",
+        "rehype-highlight": "^7.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "@types/react-syntax-highlighter": "^15.5.11",
+        "autoprefixer": "^10.4.15",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.3.3",
+        "@tailwindcss/typography": "^0.5.10",
+        "typescript": "^5"
+    }
+}

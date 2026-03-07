@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://duncan-nguyen.github.io/sitemap.xml

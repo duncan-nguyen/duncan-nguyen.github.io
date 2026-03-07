@@ -1,0 +1,47 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import avtImg from '../../../public/images/avt.jpg';
+
+export default function HeroSection() {
+    return (
+        <section className="py-20 md:py-32 px-6" id="hero">
+            <div className="max-w-6xl mx-auto">
+                <div className="asymmetric-grid">
+                    <div>
+                        <span className="text-brand-blue font-semibold tracking-widest uppercase text-sm mb-4 block hero-animate hero-delay-1">
+                            AI/ML Engineer
+                        </span>
+                        <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-[0.95] hero-animate hero-delay-2">
+                            NGUYEN<br />QUANG DUNG
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-600 max-w-xl mb-10 font-light hero-animate hero-delay-3">
+                            Specializing in <span className="text-brand-charcoal font-medium">Agentic AI</span>,{' '}
+                            <span className="text-brand-charcoal font-medium">LLM/SLM Fine-tuning</span>, and{' '}
+                            <span className="text-brand-charcoal font-medium">Physics-Informed ML</span>.
+                            Building intelligent systems for complex industrial and linguistic challenges.
+                        </p>
+                        <div className="flex items-center gap-6 hero-animate hero-delay-4">
+                            <Link href="#contact" className="primary-button px-8 py-4 font-semibold">
+                                Contact Me
+                            </Link>
+                            <Link href="#experience" className="text-brand-charcoal font-semibold border-b-2 border-brand-charcoal pb-1 hover:text-brand-blue hover:border-brand-blue transition-all">
+                                View Work
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="mt-12 md:mt-0 flex justify-center md:justify-end">
+                        <div className="relative">
+                            <div className="absolute -top-4 -right-4 w-full h-full border border-brand-blue/20 -z-10"></div>
+                            <Image
+                                alt="Professional portrait of Nguyen Quang Dung"
+                                className="w-80 h-80 md:w-96 md:h-96 object-cover transition-all duration-700 shadow-2xl rounded"
+                                src={avtImg}
+                                priority
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
