@@ -6,6 +6,13 @@
     <description>Technical blog on AI, ML, and software engineering.</description>
     <language>en-us</language>
     <item>
+      <title>Launching Physics-Informed Learning Lab</title>
+      <link>https://duncan-nguyen.github.io/blog/launching-physics-informed-learning-lab/</link>
+      <guid>https://duncan-nguyen.github.io/blog/launching-physics-informed-learning-lab/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+      <description>I just deployed a notebook-driven website for learning and exploring physics-informed machine learning, from PINNs fundamentals to operator learning and frontier research notes.</description><category>Physics-Informed ML</category><category>PINNs</category><category>Research</category><category>Jupyter Book</category>
+    </item>
+    <item>
       <title>Hello World — Why I Started This Blog</title>
       <link>https://duncan-nguyen.github.io/blog/hello-world/</link>
       <guid>https://duncan-nguyen.github.io/blog/hello-world/</guid>
