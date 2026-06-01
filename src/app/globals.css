@@ -3,22 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   body {
-    @apply text-brand-charcoal bg-[#F9FAFB] antialiased transition-colors duration-300 dark:bg-[#121212] dark:text-gray-300;
+    @apply text-brand-charcoal bg-[#F9FAFB] antialiased transition-colors duration-300 dark:bg-dm-bg dark:text-gray-300;
     line-height: 1.6;
   }
 
   h1,
   h2,
   h3 {
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
     @apply dark:text-gray-100;
+  }
+
+  /* Focus-visible ring for keyboard navigation */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-blue dark:outline-blue-400;
   }
 }
 
 @layer components {
   .nav-link {
-    @apply hover:text-brand-blue dark:hover:text-blue-400 transition-colors;
+    @apply hover:text-brand-blue dark:hover:text-blue-400 transition-colors duration-200 relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue dark:bg-blue-400 transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
   }
 
   .nav-link.active {
@@ -26,7 +45,11 @@
   }
 
   .primary-button {
-    @apply inline-block bg-brand-blue text-white hover:bg-black dark:hover:bg-gray-800 transition-all duration-300;
+    @apply inline-block bg-brand-blue text-white hover:bg-black dark:hover:bg-gray-800 transition-all duration-300 rounded-lg;
+  }
+
+  .primary-button:active {
+    @apply scale-[0.98];
   }
 
   .pill-tag {
@@ -34,7 +57,7 @@
   }
 
   .pill-tag-dark {
-    @apply inline-block px-3 py-1 text-xs font-medium border border-white/20 bg-white/10 rounded-none;
+    @apply inline-block px-3 py-1 text-xs font-medium border border-white/20 bg-white/10 rounded-md transition-all duration-200 hover:bg-white/20 hover:border-white/30;
   }
 
   .blog-title-hover {
@@ -51,11 +74,19 @@
   }
 
   .blog-card {
-    @apply transition-all duration-300 border border-gray-100 dark:border-white/5 hover:border-brand-blue/30 dark:hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-blue-900/10 bg-white dark:bg-[#1a1a1a] p-8 rounded-2xl shadow-sm;
+    @apply transition-all duration-200 border border-gray-100 dark:border-white/5 hover:border-brand-blue/30 dark:hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-blue-900/10 bg-white dark:bg-dm-surface p-8 rounded-2xl shadow-sm;
+  }
+
+  .blog-card:active {
+    @apply scale-[0.99];
   }
 
   .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .hover-lift:active {
+    @apply scale-[0.99];
   }
 
   .pipeline-connector {
@@ -88,14 +119,32 @@
   .results-table .highlight-row {
     @apply bg-blue-50/50 dark:bg-blue-900/20 font-semibold;
   }
+
+  /* Experience timeline item */
+  .experience-item {
+    @apply transition-all duration-300 rounded-xl p-6 -mx-6;
+  }
+
+  .experience-item:hover {
+    @apply bg-gray-50/50 dark:bg-white/5;
+  }
+
+  /* Honor item hover */
+  .honor-item {
+    @apply transition-all duration-200;
+  }
+
+  .honor-item:hover {
+    @apply pl-2;
+  }
 }
 
 /* Animations */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
@@ -104,25 +153,25 @@
 }
 
 .reveal-delay-1 {
-  transition-delay: 0.1s;
+  transition-delay: 0.08s;
 }
 
 .reveal-delay-2 {
-  transition-delay: 0.2s;
+  transition-delay: 0.16s;
 }
 
 .reveal-delay-3 {
-  transition-delay: 0.3s;
+  transition-delay: 0.24s;
 }
 
 .reveal-delay-4 {
-  transition-delay: 0.4s;
+  transition-delay: 0.32s;
 }
 
 @keyframes heroFadeUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(32px);
   }
 
   to {
@@ -132,7 +181,7 @@
 }
 
 .hero-animate {
-  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
@@ -141,15 +190,11 @@
 }
 
 .hero-delay-2 {
-  animation-delay: 0.25s;
+  animation-delay: 0.2s;
 }
 
 .hero-delay-3 {
-  animation-delay: 0.4s;
-}
-
-.hero-delay-4 {
-  animation-delay: 0.55s;
+  animation-delay: 0.3s;
 }
 
 /* Grid layout for Hero */
@@ -202,7 +247,7 @@
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   @apply text-brand-charcoal dark:text-white;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   line-height: 1.2;
 }
 
@@ -257,14 +302,21 @@
 
 .prose pre {
   @apply !bg-gray-100 dark:!bg-black/50 border border-brand-border dark:border-white/10;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.6;
 }
 
 .prose code {
-  @apply text-sm text-brand-charcoal dark:text-gray-200 bg-gray-100 dark:bg-black/50 px-1 py-0.5 rounded;
+    @apply text-sm text-brand-charcoal dark:text-gray-200 bg-gray-100 dark:bg-dm-code px-1.5 py-0.5 rounded;
 }
 
 .prose pre code {
   @apply bg-transparent;
+  color: #e5e7eb;
+  font-size: 0.875rem;
 }
 
 .prose ul {
@@ -290,20 +342,7 @@
   background: #f9f9f9;
   color: #4b5563;
   font-style: italic;
-}
-
-.prose pre {
-  margin: 1.5rem 0;
-  padding: 1.25rem;
-  background: #1a1a1a;
-  border-radius: 4px;
-  overflow-x: auto;
-  line-height: 1.6;
-}
-
-.prose pre code {
-  color: #e5e7eb;
-  font-size: 0.875rem;
+  border-radius: 0 8px 8px 0;
 }
 
 .prose code:not(pre code) {
@@ -312,4 +351,31 @@
   padding: 0.15em 0.4em;
   border-radius: 4px;
   color: #1a1a1a;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hero-animate {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .blog-title-hover::after {
+    transition: none !important;
+  }
+
+  .mobile-menu {
+    transition: none !important;
+  }
+
+  .nav-scrolled {
+    transition: none !important;
+  }
+
+  .nav-link::after {
+    transition: none !important;
+  }
 }

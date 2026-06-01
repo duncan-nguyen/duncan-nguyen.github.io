@@ -7,7 +7,7 @@ import './globals.css';
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-sans' });
 const outfit = Outfit({
-    weight: ['500', '700'],
+    weight: ['500', '700', '800'],
     subsets: ['latin'],
     variable: '--font-heading'
 });
@@ -61,7 +61,10 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className="font-sans antialiased bg-[#F9FAFB] dark:bg-[#121212] text-brand-charcoal dark:text-gray-200 pt-20 transition-colors duration-300">
+            <body className="font-sans antialiased bg-[#F9FAFB] dark:bg-dm-bg text-brand-charcoal dark:text-gray-200 pt-16 transition-colors duration-300">
+                <a href="#hero" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-brand-blue focus:text-white focus:px-4 focus:py-2 focus:rounded focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2">
+                    Skip to main content
+                </a>
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                     <Navbar />
                     {children}

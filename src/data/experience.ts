@@ -15,9 +15,10 @@ export const experiences: Experience[] = [
         role: "AI Engineer",
         location: "Remote",
         achievements: [
-            "Engineered robust greenhouse control systems by integrating PID controllers with gradient-based anomaly detection, improving operational stability and reducing manual interventions.",
-            "Refactored the core control module leveraging State Machine design patterns, enhancing system reliability and reducing code maintenance costs.",
-            "Developed Physics-Informed ML model to model transpiration dynamics, outperforming baseline predictive accuracy by 90% while ensuring strict physical consistency."
+            "Designed a hybrid control system that combines PID controllers with gradient-based anomaly detection for greenhouse climate regulation — processing sensor data in real-time to automatically adjust ventilation, irrigation, and heating.",
+            { strong: true, text: "Automated temperature/humidity regulation across production greenhouses, replacing manual monitoring with continuous sensor-driven control and adaptive thresholds." },
+            "Refactored the core control module with State Machine patterns — eliminating race conditions between control loops and making the system easier to maintain and extend.",
+            "Developed a Physics-Informed ML model for transpiration dynamics that encodes thermodynamic constraints directly into the loss function — producing physically consistent predictions that pure data-driven models could not achieve."
         ]
     },
     {
@@ -27,10 +28,10 @@ export const experiences: Experience[] = [
         role: "AI Engineer (Promoted from Intern)",
         location: "Ha Noi, Vietnam",
         achievements: [
-            { strong: true, text: "Startup Incubation & R&D: Spearheaded the technical R&D for Web3 AI initiatives, translating abstract business requirements into functional MVPs and scalable architectures for flagship portfolio products." },
-            "Architected a Web3 Multi-Agent Platform using Model Context Protocol (MCP), successfully automating yield optimization strategies and serving as the core engine for a flagship product.",
-            "Developed a crypto-wallet classification microservice with FastAPI, managing the full ML lifecycle from data curation to production inference.",
-            "Implemented domain-specific RAG and NER pipelines tailored for blockchain data, reducing LLM hallucination rates and significantly improving autonomous agent reliability."
+            { strong: true, text: "Led technical R&D for Web3 AI initiatives — translating ambiguous business requirements into production architecture, managing the full cycle from feasibility research to deployment." },
+            "Architected a Web3 Multi-Agent Platform using MCP (Model Context Protocol) — building the core engine for automated yield optimization that became the flagship product's primary differentiator.",
+            "Built a crypto-wallet classification microservice with FastAPI — handling the full ML lifecycle from data curation and labeling to model training and production inference.",
+            "Implemented RAG and NER pipelines for blockchain data — grounding LLM responses in verified on-chain data to reduce hallucination on domain-specific queries."
         ]
     },
     {
@@ -40,8 +41,9 @@ export const experiences: Experience[] = [
         role: "Undergraduate Research Assistant",
         location: "Hanoi, Vietnam",
         achievements: [
-            "Optimized pre-training and fine-tuning pipelines for Small Language Models, significantly enhancing Information Retrieval capabilities for low-resource domains.",
-            "Standardized NLP workflows for NER and Text Classification, achieving substantial improvements in data processing efficiency and evaluation consistency."
+            "Designed Agentic Memory architectures for LLM agents — implementing persistent context storage and retrieval mechanisms that enabled multi-turn reasoning across complex task flows without prompt bloat.",
+            "Developed LLM distillation pipelines that compress large teacher models into compact students — reducing inference cost while retaining task performance on domain benchmarks.",
+            "Built a reasoning evaluation framework for analyzing chain-of-thought strategies — identifying systematic failure modes in CoT prompting that inform better prompt engineering practices."
         ]
     }
 ];

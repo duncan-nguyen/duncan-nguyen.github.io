@@ -10,11 +10,6 @@ export const honors: Honor[] = [
         description: "National Physics Olympiad (VPhO)",
     },
     {
-        title: "Top 6 Globally",
-        description: "Trustworthy NeuroSymbolic & XAI Workshop @ IJCNN 2025",
-        year: "2025"
-    },
-    {
         title: "Top 5 Finalist",
         description: "DataFlow 2025 — National Data Analysis Hackathon",
         year: "2025"

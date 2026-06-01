@@ -4,6 +4,7 @@ import TableOfContents from '@/components/blog/TableOfContents';
 import { getAllPosts, getPostBySlug, getRelatedPosts, slugifyHeading } from '@/lib/blog';
 import { format } from 'date-fns';
 import 'highlight.js/styles/github.css';
+import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
@@ -104,9 +105,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <section className="py-16 md:py-20 px-6 border-b border-brand-border">
                 <div className="max-w-3xl mx-auto">
                     <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-brand-blue transition-colors mb-8">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                        </svg>
+                        <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">{post.meta.title}</h1>
@@ -189,9 +188,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <section className="pb-16 px-6">
                 <div className="max-w-3xl mx-auto border-t border-brand-border pt-8">
                     <Link href="/blog/" className="inline-flex items-center gap-2 text-brand-blue font-semibold hover:underline transition-colors">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                        </svg>
+                        <ArrowLeft className="w-4 h-4" />
                         All Posts
                     </Link>
                 </div>

@@ -74,7 +74,7 @@ export default function BlogListClient({
 
     return (
         <div className="space-y-8">
-            <div className="rounded-2xl border border-gray-100 dark:border-white/5 bg-white dark:bg-[#1a1a1a] shadow-sm p-6 md:p-8 space-y-6">
+            <div className="rounded-2xl border border-gray-100 dark:border-white/5 bg-white dark:bg-dm-surface shadow-sm p-6 md:p-8 space-y-6">
                 <div className="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
                     <label htmlFor="blog-search" className="text-sm font-semibold tracking-widest uppercase text-gray-500 dark:text-gray-400">
                         Search articles

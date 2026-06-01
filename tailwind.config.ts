@@ -16,6 +16,12 @@ const config: Config = {
                     softGray: '#f9f9f9',
                     border: '#e5e5e5',
                     dark: '#111111'
+                },
+                dm: {
+                    bg: '#121212',
+                    surface: '#1a1a1a',
+                    subtle: 'rgba(0,0,0,0.2)',
+                    code: 'rgba(0,0,0,0.5)',
                 }
             },
             fontFamily: {

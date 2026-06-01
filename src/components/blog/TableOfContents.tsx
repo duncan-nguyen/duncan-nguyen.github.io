@@ -41,7 +41,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
     if (items.length === 0) return null;
 
     return (
-        <aside className="border border-brand-border dark:border-white/10 p-4 bg-white dark:bg-[#1a1a1a] lg:sticky lg:top-28">
+        <aside className="border border-brand-border dark:border-white/10 p-4 bg-white dark:bg-dm-surface lg:sticky lg:top-28">
             <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 dark:text-gray-400 mb-3">On this page</p>
             <ul className="space-y-2">
                 {items.map((item) => (

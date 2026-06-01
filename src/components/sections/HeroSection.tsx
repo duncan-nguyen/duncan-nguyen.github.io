@@ -1,48 +1,42 @@
+import { Download } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import avtImg from '../../../public/images/avt.jpg';
 
 export default function HeroSection() {
     return (
-        <section className="py-20 md:py-32 px-6" id="hero">
+        <section className="pt-28 pb-20 md:pt-36 md:pb-28 px-6" id="hero">
             <div className="max-w-6xl mx-auto">
                 <div className="asymmetric-grid">
                     <div>
-                        <span className="text-brand-blue font-semibold tracking-widest uppercase text-sm mb-4 block hero-animate hero-delay-1">
-                            AI/ML Engineer
-                        </span>
-                        <h1 className="text-6xl md:text-8xl mb-8 leading-[0.95] hero-animate hero-delay-2">
+                        <h1 className="text-5xl md:text-7xl mb-6 leading-[1] hero-animate hero-delay-1 tracking-tight">
                             <span className="font-extrabold">NGUYEN <br /> QUANG DUNG</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-xl mb-10 font-light hero-animate hero-delay-3">
-                            Specializing in <span className="text-brand-charcoal dark:text-white font-medium">Agentic AI</span>,{' '}
-                            <span className="text-brand-charcoal dark:text-white font-medium">LLM/SLM Fine-tuning</span>, and{' '}
-                            <span className="text-brand-charcoal dark:text-white font-medium">Physics-Informed ML</span>.
-                            Building intelligent systems for complex industrial and linguistic challenges.
+                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg mb-8 leading-relaxed hero-animate hero-delay-2">
+                            AI engineer building systems that run in the real world — not just in notebooks. 
+                            Currently at <span className="text-brand-charcoal dark:text-white font-medium">Koidra AI</span>, 
+                            where physics constraints meet real-time greenhouse control.
                         </p>
-                        <div className="flex flex-wrap items-center gap-6 hero-animate hero-delay-4">
-                            <Link href="#contact" className="primary-button relative overflow-hidden group px-8 py-4 font-semibold shadow-md hover:shadow-xl hover:shadow-brand-blue/20 transition-all duration-300">
-                                <span className="relative z-10">Contact Me</span>
-                                <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/0 via-white/20 to-brand-blue/0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                        <div className="flex flex-wrap items-center gap-5 hero-animate hero-delay-3">
+                            <Link href="#experience" className="primary-button px-7 py-3.5 font-semibold shadow-md hover:shadow-xl hover:shadow-brand-blue/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+                                See my work
                             </Link>
-                            <Link href="#experience" className="text-brand-charcoal dark:text-white font-semibold border-b-2 border-brand-charcoal dark:border-white pb-1 hover:text-brand-blue dark:hover:text-blue-400 dark:hover:border-blue-400 transition-all">
-                                View Work
-                            </Link>
-                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center gap-2 text-brand-charcoal dark:text-white font-semibold border-b-2 border-brand-charcoal dark:border-white pb-1 hover:text-brand-blue dark:hover:text-blue-400 dark:hover:border-blue-400 transition-all">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-brand-charcoal dark:text-white font-semibold border-b-2 border-brand-charcoal dark:border-white pb-0.5 hover:text-brand-blue dark:hover:text-blue-400 dark:hover:border-blue-400 transition-all">
+                                <Download className="w-4 h-4" />
                                 Download CV
                             </a>
                         </div>
                     </div>
                     <div className="mt-12 md:mt-0 flex justify-center md:justify-end">
-                        <div className="relative group">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue/30 to-blue-400/30 rounded blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                            <div className="absolute -top-4 -right-4 w-full h-full border border-brand-blue/20 -z-10 rounded-lg"></div>
+                        <div className="relative">
+                            <div className="absolute -top-3 -right-3 w-full h-full border border-brand-blue/15 -z-10 rounded-2xl"></div>
                             <Image
-                                alt="Professional portrait of Nguyen Quang Dung"
-                                className="w-80 h-80 md:w-96 md:h-96 object-cover transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.1)] group-hover:shadow-[0_20px_50px_rgba(0,100,250,0.15)] rounded-xl"
+                                alt="Portrait of Nguyen Quang Dung"
+                                className="w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.08)]"
                                 src={avtImg}
                                 priority
+                                width={384}
+                                height={384}
                             />
                         </div>
                     </div>
