@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:#FBF7F0;color:#45362B;font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#B04F2C;text-decoration:none}
+a:hover{color:#8E3D20}
+::selection{background:#F3D9C6}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#FBF7F0">
+
+<nav style="position:sticky;top:0;z-index:10;background:rgba(251,247,240,0.88);backdrop-filter:blur(10px);border-bottom:1px solid #EDE3D5">
+  <div style="max-width:1120px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="#top" style="font-family:'Newsreader',serif;font-size:20px;color:#45362B;letter-spacing:-0.01em">Nguyen Quang Dung</a>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:14px">
+      <a href="#news" style="color:#7A6A5C" style-hover="color:#B04F2C">News</a>
+      <a href="#publications" style="color:#7A6A5C" style-hover="color:#B04F2C">Publications</a>
+      <a href="#experience" style="color:#7A6A5C" style-hover="color:#B04F2C">Experience</a>
+      <a href="#honors" style="color:#7A6A5C" style-hover="color:#B04F2C">Honors</a>
+      <a href="#contact" style="color:#7A6A5C" style-hover="color:#B04F2C">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top" data-screen-label="Hero" style="max-width:1120px;margin:0 auto;padding:96px 32px 80px;display:flex;flex-wrap:wrap;gap:56px;align-items:flex-end">
+  <div style="flex:1 1 560px;min-width:0">
+    <div style="display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#7A6A5C;margin-bottom:28px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#D9824F"></span>
+      <span>AI/ML Engineer · Researcher · Hanoi</span>
+    </div>
+    <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 20px;color:#3A2C22">Nguyen Quang Dung</h1>
+    <p style="font-size:18px;line-height:1.6;color:#6B5B4E;max-width:560px;margin:0 0 32px;text-wrap:pretty">AI/ML engineer and researcher. Currently focused on geometry in language models, LLM reasoning and knowledge distillation.</p>
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+      <a href="./uploads/AI_Engineer.pdf" download style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">CV</a>
+      <a href="mailto:nqdung.work@gmail.com" style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">Email</a>
+      <a href="https://github.com/duncan-nguyen" target="_blank" rel="noopener" style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">GitHub</a>
+      <a href="https://www.linkedin.com/in/-duncan-nguyen/" target="_blank" rel="noopener" style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">LinkedIn</a>
+    </div>
+  </div>
+  <aside style="flex:1 1 320px;max-width:400px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8A7869;margin-bottom:10px">Thinking about</div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid #E6D8C5">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B04F2C">01</span>
+        <span style="font-family:'Newsreader',serif;font-size:24px;line-height:1.2;color:#3A2C22">Geometry of language models</span>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid #E6D8C5">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B04F2C">02</span>
+        <span style="font-family:'Newsreader',serif;font-size:24px;line-height:1.2;color:#3A2C22">LLM reasoning</span>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid #E6D8C5;border-bottom:1px solid #E6D8C5">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B04F2C">03</span>
+        <span style="font-family:'Newsreader',serif;font-size:24px;line-height:1.2;color:#3A2C22">Knowledge distillation</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:10px 16px;font-size:14px;line-height:1.45">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8A7869;padding-top:2px">Work</span>
+      <span style="color:#45362B">AI/ML Engineer, <span style="color:#7A6A5C">Koidra AI</span></span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8A7869;padding-top:2px">Lab</span>
+      <span style="color:#45362B">Research Assistant, <span style="color:#7A6A5C">BKAI Foundation Model Lab</span></span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8A7869;padding-top:2px">Study</span>
+      <span style="color:#45362B">B.Sc. Computer Science, <span style="color:#7A6A5C">HUST ’27</span></span>
+    </div>
+  </aside>
+</header>
+
+<section id="news" data-screen-label="News" style="max-width:1120px;margin:0 auto;padding:72px 32px;border-top:1px solid #EDE3D5">
+  <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:42px;letter-spacing:-0.02em;margin:0 0 32px;color:#3A2C22">News</h2>
+  <div style="display:flex;flex-direction:column;border-bottom:1px solid #EDE3D5">
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">2026</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B"><strong style="font-weight:600;color:#3A2C22">HyperProve</strong> accepted to <span style="color:#B04F2C">EMNLP 2026 Main Conference</span> as co-first author. <a href="https://arxiv.org/abs/2609.13768" target="_blank" rel="noopener">arXiv ↗</a></span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">Feb 2026</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B">Joined the <strong style="font-weight:600;color:#3A2C22">Foundation Model Lab — BKAI</strong> as an undergraduate research assistant.</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">Nov 2025</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B">Started as AI/ML Engineer at <strong style="font-weight:600;color:#3A2C22">Koidra AI</strong>.</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">2025</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B">Ranked <strong style="font-weight:600;color:#3A2C22">Top 6 globally</strong> at the Trustworthy NeuroSymbolic &amp; XAI Workshop @ IJCNN 2025.</span>
+      </div>
+    <sc-if value="{{ newsAll }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">2025</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B"><strong style="font-weight:600;color:#3A2C22">Top 5 finalist</strong> at DataFlow 2025, the national data analysis hackathon.</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">Feb 2025</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B">Joined <strong style="font-weight:600;color:#3A2C22">A-Star Group</strong> as an AI intern, later promoted to AI Engineer.</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 32px;padding:16px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 120px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:2px">May 2024</span>
+        <span style="flex:1 1 480px;min-width:0;font-size:16px;line-height:1.55;color:#45362B">Joined the <strong style="font-weight:600;color:#3A2C22">NLP Lab — BKAI</strong>, working on Vietnamese legal QA.</span>
+      </div>
+    </sc-if>
+  </div>
+  <button onClick="{{ toggleNews }}" style="margin-top:20px;font-family:inherit;padding:0;background:none;border:none;cursor:pointer;font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">{{ newsLabel }}</button>
+</section>
+
+<section id="publications" data-screen-label="Publications" style="max-width:1120px;margin:0 auto;padding:72px 32px;border-top:1px solid #EDE3D5">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:40px">
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:42px;letter-spacing:-0.02em;margin:0;color:#3A2C22">Publications</h2>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A7869;letter-spacing:0.06em">⋆ EQUAL CONTRIBUTION</span>
+  </div>
+
+  <article style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:32px;background:#F5EDE1;border:1px solid #EADFCF;border-radius:20px">
+    <div style="flex:0 0 140px;display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#B04F2C">EMNLP 2026</span>
+      <span style="align-self:flex-start;font-size:12px;padding:4px 10px;border-radius:999px;background:#FBE3D3;color:#8E3D20">Co-first author</span>
+    </div>
+    <div style="flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;line-height:1.25;margin:0;color:#3A2C22;text-wrap:balance">HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering</h3>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#6B5B4E">An Nguyen Phu⋆, <strong style="color:#3A2C22;font-weight:600;border-bottom:2px solid #E7A57F">Dung Nguyen Quang⋆</strong>, Luu Hieu An, Linh Ngo Van, Trung Le, Thien Huu Nguyen</p>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#6B5B4E;text-wrap:pretty">Answer-conditioned hypergraph retrieval over atomic facts, outperforming the strongest evaluated baselines by 6.2% in answer accuracy and 4.9% in F1 across three multi-hop QA benchmarks.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:6px">
+        <a href="https://arxiv.org/abs/2609.13768" target="_blank" rel="noopener" style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.13768" target="_blank" rel="noopener" style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">PDF</a>
+        <a href="#" style="font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">Code</a>
+        <button onClick="{{ toggleBib }}" style="font-family:inherit;padding:0;background:none;border:none;cursor:pointer;font-size:15px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">{{ bibLabel }}</button>
+      </div>
+      <sc-if value="{{ bibOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:relative;margin-top:8px;background:#FFFCF7;border:1px solid #E3D6C4;border-radius:12px;padding:18px 20px">
+          <pre style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;color:#6B5B4E;white-space:pre-wrap;word-break:break-word">@inproceedings{nguyen2026hyperprove,
+  title     = {HyperProve: Answer-Guided Hypergraph Expansion
+               for Multi-Hop Question Answering},
+  author    = {Nguyen Phu, An and Nguyen Quang, Dung and Luu, Hieu An
+               and Ngo Van, Linh and Le, Trung and Nguyen, Thien Huu},
+  booktitle = {Proceedings of EMNLP},
+  eprint    = {2609.13768},
+  archivePrefix = {arXiv},
+  year      = {2026}
+}</pre>
+          <button onClick="{{ copyBib }}" style="position:absolute;top:14px;right:16px;font-family:inherit;font-size:13px;padding:0;background:none;border:none;color:#B04F2C;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#E3B89C">{{ copyLabel }}</button>
+        </div>
+      </sc-if>
+    </div>
+  </article>
+</section>
+
+<section id="experience" data-screen-label="Experience" style="max-width:1120px;margin:0 auto;padding:72px 32px;border-top:1px solid #EDE3D5">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px">
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:42px;letter-spacing:-0.02em;margin:0;color:#3A2C22">Experience</h2>
+    <div style="display:flex;gap:24px">
+      <button onClick="{{ setAll }}" style="font-family:inherit;font-size:15px;padding:4px 0;background:none;border:none;border-bottom:1.5px solid {{ tabAll.line }};color:{{ tabAll.fg }};cursor:pointer" style-hover="color:#3A2C22">All</button>
+      <button onClick="{{ setIndustry }}" style="font-family:inherit;font-size:15px;padding:4px 0;background:none;border:none;border-bottom:1.5px solid {{ tabInd.line }};color:{{ tabInd.fg }};cursor:pointer" style-hover="color:#3A2C22">Industry</button>
+      <button onClick="{{ setResearch }}" style="font-family:inherit;font-size:15px;padding:4px 0;background:none;border:none;border-bottom:1.5px solid {{ tabRes.line }};color:{{ tabRes.fg }};cursor:pointer" style-hover="color:#3A2C22">Research</button>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;margin-bottom:24px">
+    <div style="min-width:720px;position:relative;padding:26px 0 0">
+      <div style="position:absolute;left:88px;right:0;top:0;bottom:0;pointer-events:none">
+        <span style="position:absolute;left:8.33%;top:0;bottom:0;border-left:1px dashed #E3D6C4"></span><span style="position:absolute;left:8.33%;bottom:0;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A7869">2024</span><span style="position:absolute;left:33.33%;top:0;bottom:0;border-left:1px dashed #E3D6C4"></span><span style="position:absolute;left:33.33%;bottom:0;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A7869">2025</span><span style="position:absolute;left:58.33%;top:0;bottom:0;border-left:1px dashed #E3D6C4"></span><span style="position:absolute;left:58.33%;bottom:0;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A7869">2026</span><span style="position:absolute;left:83.33%;top:0;bottom:0;border-left:1px dashed #E3D6C4"></span><span style="position:absolute;left:83.33%;bottom:0;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A7869">2027</span>
+        <span style="position:absolute;left:75%;top:20px;bottom:22px;border-left:2px solid #C8653D"></span>
+        <span style="position:absolute;left:75%;top:0;transform:translateX(-50%);line-height:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#B04F2C">now</span>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;padding-bottom:28px">
+      <div style="display:flex;align-items:stretch">
+        <div style="flex:0 0 88px;display:flex;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8A7869">Study</div>
+        <div style="position:relative;flex:1;height:44px;border-top:1px solid #EDE3D5">
+          <div style="position:absolute;top:6px;bottom:6px;left:4.17%;width:70.83%;background:#EADFCF;border-radius:8px;display:flex;align-items:center;padding:0 10px;box-sizing:border-box;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:500;color:#3A2C22;border-radius:8px 0 0 8px">B.Sc. Computer Science — HUST</div><div style="position:absolute;top:6px;bottom:6px;left:75%;width:22.92%;background:repeating-linear-gradient(135deg,#F3EADD 0 6px,#EEE3D4 6px 12px);border-radius:8px;display:flex;align-items:center;padding:0 10px;box-sizing:border-box;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:500;color:#3A2C22;border-radius:0 8px 8px 0"></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:stretch">
+        <div style="flex:0 0 88px;display:flex;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8A7869">Industry</div>
+        <div style="position:relative;flex:1;height:44px;border-top:1px solid #EDE3D5">
+          <div style="position:absolute;top:6px;bottom:6px;left:35.42%;width:18.55%;background:#F3CFB7;border-radius:8px;display:flex;align-items:center;padding:0 10px;box-sizing:border-box;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:500;color:#3A2C22;">A-Star Group</div><div style="position:absolute;top:6px;bottom:6px;left:54.37%;width:20.63%;background:#F3CFB7;border-radius:8px;display:flex;align-items:center;padding:0 10px;box-sizing:border-box;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:500;color:#3A2C22;border-radius:8px 0 0 8px;background:linear-gradient(90deg,#F3CFB7 80%,#F8E2D3)">Koidra AI</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:stretch">
+        <div style="flex:0 0 88px;display:flex;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8A7869">Research</div>
+        <div style="position:relative;flex:1;height:44px;border-top:1px solid #EDE3D5">
+          <div style="position:absolute;top:6px;bottom:6px;left:16.67%;width:37.5%;background:#DCE4C8;border-radius:8px;display:flex;align-items:center;padding:0 10px;box-sizing:border-box;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:500;color:#3A2C22;">NLP Lab — BKAI</div><div style="position:absolute;top:6px;bottom:6px;left:60.42%;width:14.58%;background:#DCE4C8;border-radius:8px;display:flex;align-items:center;padding:0 10px;box-sizing:border-box;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:500;color:#3A2C22;border-radius:8px 0 0 8px;background:linear-gradient(90deg,#DCE4C8 75%,#E8EEDB)">FM Lab — BKAI</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column">
+
+    <sc-if value="{{ showIndustry }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;gap:12px 48px;padding:32px 0;border-bottom:1px solid #EDE3D5">
+        <div style="flex:0 0 180px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:4px">Nov 2025 — Now</div>
+        <div style="flex:1 1 520px;min-width:0">
+          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0;color:#3A2C22">Koidra AI</h3>
+            <span style="font-size:12px;padding:3px 9px;border-radius:999px;background:#FBE3D3;color:#8E3D20">Industry</span>
+          </div>
+          <div style="font-size:15px;color:#7A6A5C;margin:4px 0 0">AI/ML Engineer · Remote</div>
+          <sc-if value="{{ detailed }}" hint-placeholder-val="{{ true }}">
+            <ul style="margin:16px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.6;color:#6B5B4E">
+              <li>Trained and shipped a physics-informed greenhouse digital twin (differentiable ODE climate simulator, BPTT) across a 14-location fleet — R² 0.92–0.95 on air temperature and 0.67–0.82 on vapor pressure over free-running multi-day horizons.</li>
+              <li>Built flux-level diagnostic tooling decomposing each state's heat and vapor balance per process.</li>
+              <li>Designed a physics-informed transpiration model reaching R² 0.90, a 20% relative improvement over baselines.</li>
+              <li>Integrated PID-based control with gradient-based anomaly detection; refactored the control module around a state machine, reducing manual interventions in production.</li>
+            </ul>
+          </sc-if>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ showResearch }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;gap:12px 48px;padding:32px 0;border-bottom:1px solid #EDE3D5">
+        <div style="flex:0 0 180px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:4px">Feb 2026 — Now</div>
+        <div style="flex:1 1 520px;min-width:0">
+          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0;color:#3A2C22">Foundation Model Lab — BKAI</h3>
+            <span style="font-size:12px;padding:3px 9px;border-radius:999px;background:#E9EDDC;color:#4E5B33">Research</span>
+          </div>
+          <div style="font-size:15px;color:#7A6A5C;margin:4px 0 0">Undergraduate Research Assistant · Hanoi</div>
+          <sc-if value="{{ detailed }}" hint-placeholder-val="{{ true }}">
+            <ul style="margin:16px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.6;color:#6B5B4E">
+              <li>Developed a memory-augmented agent integrating episodic memory, semantic retrieval and graph-structured knowledge — 74% on LoCoMo10, 86% on LongMemEval-S.</li>
+              <li>Investigating information-theoretic and model-geometry approaches to LLM knowledge distillation: transferring teacher knowledge through distributional signals, representation structure and semantic alignment.</li>
+            </ul>
+          </sc-if>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ showIndustry }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;gap:12px 48px;padding:32px 0;border-bottom:1px solid #EDE3D5">
+        <div style="flex:0 0 180px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:4px">Feb 2025 — Nov 2025</div>
+        <div style="flex:1 1 520px;min-width:0">
+          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0;color:#3A2C22">A-Star Group</h3>
+            <span style="font-size:12px;padding:3px 9px;border-radius:999px;background:#FBE3D3;color:#8E3D20">Industry</span>
+          </div>
+          <div style="font-size:15px;color:#7A6A5C;margin:4px 0 0">AI Engineer (promoted from Intern) · Hanoi</div>
+          <sc-if value="{{ detailed }}" hint-placeholder-val="{{ true }}">
+            <ul style="margin:16px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.6;color:#6B5B4E">
+              <li>Led technical development of 3 Web3 AI initiatives, from stakeholder requirements to deployable MVPs.</li>
+              <li>Architected an MCP-based multi-agent platform executing 10+ on-chain tools and workflows at a 95% task-completion rate.</li>
+              <li>Delivered a FastAPI wallet-classification service trained on 3M+ wallets, reaching 75% accuracy (SOTA).</li>
+              <li>Implemented blockchain-specific RAG and NER pipelines to improve entity grounding and reduce hallucinations.</li>
+            </ul>
+          </sc-if>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ showResearch }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;gap:12px 48px;padding:32px 0;border-bottom:1px solid #EDE3D5">
+        <div style="flex:0 0 180px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#8A7869;padding-top:4px">May 2024 — Nov 2025</div>
+        <div style="flex:1 1 520px;min-width:0">
+          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0;color:#3A2C22">Natural Language Processing Lab — BKAI</h3>
+            <span style="font-size:12px;padding:3px 9px;border-radius:999px;background:#E9EDDC;color:#4E5B33">Research</span>
+          </div>
+          <div style="font-size:15px;color:#7A6A5C;margin:4px 0 0">Undergraduate Research Assistant · Hanoi</div>
+          <sc-if value="{{ detailed }}" hint-placeholder-val="{{ true }}">
+            <ul style="margin:16px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.6;color:#6B5B4E">
+              <li>Contributed to Vietnamese legal QA research — data preparation, fine-tuning and evaluation pipelines for preference-aligned language models.</li>
+            </ul>
+          </sc-if>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</section>
+
+<section id="honors" data-screen-label="Honors and skills" style="max-width:1120px;margin:0 auto;padding:72px 32px;border-top:1px solid #EDE3D5;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px">
+  <div>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:36px;letter-spacing:-0.02em;margin:0 0 28px;color:#3A2C22">Honors &amp; awards</h2>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;gap:20px;padding:18px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 96px;font-family:'Newsreader',serif;font-size:20px;color:#B04F2C">2nd Prize</span>
+        <span style="font-size:15px;line-height:1.55;color:#6B5B4E">Vietnamese National Excellent Student Competition in Physics (VPhO)</span>
+      </div>
+      <div style="display:flex;gap:20px;padding:18px 0;border-top:1px solid #EDE3D5">
+        <span style="flex:0 0 96px;font-family:'Newsreader',serif;font-size:20px;color:#B04F2C">Top 6</span>
+        <span style="font-size:15px;line-height:1.55;color:#6B5B4E">Globally — Trustworthy NeuroSymbolic &amp; XAI Workshop @ IJCNN 2025</span>
+      </div>
+      <div style="display:flex;gap:20px;padding:18px 0;border-top:1px solid #EDE3D5;border-bottom:1px solid #EDE3D5">
+        <span style="flex:0 0 96px;font-family:'Newsreader',serif;font-size:20px;color:#B04F2C">Top 5</span>
+        <span style="font-size:15px;line-height:1.55;color:#6B5B4E">Finalist — DataFlow 2025, National Data Analysis Hackathon</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:36px;letter-spacing:-0.02em;margin:0 0 28px;color:#3A2C22">Toolkit</h2>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8A7869;margin-bottom:10px">AI / ML</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">PyTorch</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Physics-informed ML</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Differentiable simulation &amp; BPTT</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Time-series</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">GraphRAG</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Knowledge distillation</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Information retrieval</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8A7869;margin-bottom:10px">Agentic AI</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">LangChain</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">LangGraph</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Model Context Protocol</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Tool calling</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Multi-agent systems</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8A7869;margin-bottom:10px">Backend / MLOps</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Python</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">FastAPI</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Docker</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">CI/CD</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">Vector databases</span>
+          <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#FFFCF7;border:1px solid #E6D8C5;color:#45362B">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" data-screen-label="Contact" style="background:#F5EDE1;border-top:1px solid #EADFCF">
+  <div style="max-width:1120px;margin:0 auto;padding:80px 32px 40px;display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;flex-direction:column;gap:28px;max-width:640px">
+      <div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,4vw,44px);line-height:1.12;letter-spacing:-0.02em;margin:0 0 16px;color:#3A2C22;text-wrap:balance">Open to research collaborations and ML engineering roles.</h2>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#6B5B4E">The best way to reach me is by email.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 32px">
+        <a href="mailto:nqdung.work@gmail.com" style="font-size:16px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">Email</a>
+        <a href="https://www.linkedin.com/in/-duncan-nguyen/" target="_blank" rel="noopener" style="font-size:16px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">LinkedIn</a>
+        <a href="https://github.com/duncan-nguyen" target="_blank" rel="noopener" style="font-size:16px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">GitHub</a>
+        <a href="#" style="font-size:16px;color:#3A2C22;text-decoration:underline;text-decoration-color:#E3B89C;text-underline-offset:5px;text-decoration-thickness:1px" style-hover="color:#B04F2C;text-decoration-color:#B04F2C">Google Scholar</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;border-top:1px solid #E3D6C4;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A7869">
+      <span>© 2026 Nguyen Quang Dung · Hanoi</span>
+      <a href="#top" style="color:#8A7869" style-hover="color:#B04F2C">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;experienceView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;detailed&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;detailed&quot;,&quot;tsType&quot;:&quot;'detailed'|'compact'&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = { filter: 'all', bibOpen: false, copied: false, newsAll: false };
+  componentWillUnmount() { clearTimeout(this._t); }
+  tab(key) {
+    const on = this.state.filter === key;
+    return { fg: on ? '#3A2C22' : '#8A7869', line: on ? '#C8653D' : 'transparent' };
+  }
+  renderVals() {
+    const f = this.state.filter;
+    const bib = `@inproceedings{nguyen2026hyperprove,\n  title={HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering},\n  author={Nguyen Phu, An and Nguyen Quang, Dung and Luu, Hieu An and Ngo Van, Linh and Le, Trung and Nguyen, Thien Huu},\n  booktitle={Proceedings of EMNLP},\n  eprint={2609.13768},\n  archivePrefix={arXiv},\n  year={2026}\n}`;
+    return {
+      newsAll: this.state.newsAll,
+      newsLabel: this.state.newsAll ? 'Show less' : 'Earlier news',
+      toggleNews: () => this.setState(s => ({ newsAll: !s.newsAll })),
+      detailed: (this.props.experienceView ?? 'detailed') === 'detailed',
+      showIndustry: f !== 'research',
+      showResearch: f !== 'industry',
+      tabAll: this.tab('all'), tabInd: this.tab('industry'), tabRes: this.tab('research'),
+      setAll: () => this.setState({ filter: 'all' }),
+      setIndustry: () => this.setState({ filter: 'industry' }),
+      setResearch: () => this.setState({ filter: 'research' }),
+      bibOpen: this.state.bibOpen,
+      bibLabel: this.state.bibOpen ? 'Hide BibTeX' : 'BibTeX',
+      toggleBib: () => this.setState(s => ({ bibOpen: !s.bibOpen })),
+      copyLabel: this.state.copied ? 'Copied' : 'Copy',
+      copyBib: () => {
+        navigator.clipboard?.writeText(bib).catch(() => {});
+        this.setState({ copied: true });
+        clearTimeout(this._t);
+        this._t = setTimeout(() => this.setState({ copied: false }), 1500);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
